@@ -1,0 +1,7 @@
+#
+# robots.txt
+# 2013/7/12
+#
+
+User-agent: *
+Disallow: /admin/

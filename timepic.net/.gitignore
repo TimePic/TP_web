@@ -1,0 +1,9 @@
+assets/
+protected/runtime/
+images/upload/coffee/
+images/upload/chinchillaMarket/
+images/upload/tmp/
+images/upload/totorotalk/
+nbproject/
+protected/config/main.php
+protected/config/params.php

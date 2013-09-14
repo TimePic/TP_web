@@ -1,0 +1,102 @@
+body{
+    background-color: #FFFFFF;
+    background-image: url("/images/static/common/bg.png");
+    background-repeat: repeat;
+}
+
+.footer{
+    background-color: #F5F5F5;
+    border-top: 1px solid #E5E5E5;
+    margin-top: 70px;
+    padding: 70px 0;
+}
+.indexCarousel{
+	margin-top: 10px;
+}
+.wordwrap{word-wrap:break-word;white-space:pre-wrap;}
+
+/*******wallpaper***********/
+
+#wallpaperlogo{width:100%;height:150px;margin-bottom: 30px;}
+#wallpaperlogo img{margin-top:10px;width:300px;}
+#wallpaperintro p{
+	padding-top: 10px;
+	font-size: 17px;
+	line-height: 16px;
+}
+
+#wallpaperscreen{
+	margin-top: 20px;
+	margin-left: 150px;
+}
+#wallpaperscreen img{width: 260px;}
+/*******totoroTalk***********/
+
+#totoroscreen{
+	margin-top: 20px;
+	margin-left: 150px;
+}
+#totorologo{width:100%;height:150px;}
+#totorologo img{margin-top:10px;width:400px;}
+#totorointro{
+	width: 426px;
+	height: 243px;
+	background:url(/images/static/totorotalk/note.png) no-repeat;
+}
+#totorointro .caption{
+	font-size: 13px;
+	line-height: 16px;
+	margin-left: 152px;
+	margin-right: 63px;
+	padding-top: 70px;
+}
+.totorolabel{
+	padding: 5px;
+	text-align: right;
+}
+.totorosubmit{
+	padding-top: 10px;
+	padding-left: 50px;
+	margin: auto;
+}
+/*** Clouds ***/
+.clouds		{ width:100%; height:262px;}
+#clouds_small	{ height:100%; background:url(/images/static/common/bg-clouds-small.png) repeat-x scroll 0 0 transparent; }
+#cloud_front		{ position:absolute;top:0px;}
+#clouds_big	{height:100%; background:url(/images/static/common/bg-clouds-big.png) repeat-x scroll 0 0 transparent;}
+.carousel .item > img{width: 100%;}
+
+.grayborder{
+	border: 1px solid #E1E1E1;
+}
+.noborder{
+	border: 0px;
+	box-shadow:none;
+}
+.changePhoto{
+    background: none repeat scroll 0 0 #222222;
+    border: 3px solid #FFFFFF;
+    border-radius: 23px 23px 23px 23px;
+    color: #FFFFFF;
+    font-size: 60px;
+    font-weight: 100;
+    height: 40px;
+	width: 40px;
+    left: 15px;
+    line-height: 30px;
+    margin-top: 450px;
+    opacity: 0.5;
+	display: block;
+    text-align: center;
+    top: 40%;
+}
+
+.changePhoto:hover {
+    color: #FFFFFF;
+    opacity: 0.9;
+    text-decoration: none;
+}
+.show_nave {
+    margin-bottom: 20px;
+    margin-top: 10px;
+}

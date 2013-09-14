@@ -1,0 +1,67 @@
+/* 
+    Document   : admin
+    Created on : 2012-4-5, 17:01:30
+    Author     : lixiaoxin
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+body
+{
+	margin: 0;
+	padding: 0;
+	color: #555;
+	font: normal 10pt Arial,Helvetica,sans-serif;
+}
+.table{TABLE-LAYOUT: fixed;}
+.table td{
+	word-wrap: break-word;
+}
+
+#page
+{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	background: white;
+}
+
+#header
+{
+	margin-top: 40px;
+	padding: 0;
+}
+
+#content
+{
+    padding-left: 10px;
+}
+
+#sidebar
+{
+	float: left;
+	padding: 0;
+}
+
+#footer
+{
+	padding: 10px;
+	margin: 10px 20px;
+	font-size: 0.8em;
+	text-align: center;
+	border-top: 1px solid #cccccc;
+}
+
+.subnav{
+	border-radius: 4px 4px 4px 4px;
+    font-size: 12px;
+    padding: 9px 0;
+    position: fixed;
+    left: 20px;
+    top: 60px;
+    width: 160px;
+    z-index: 1030;
+}

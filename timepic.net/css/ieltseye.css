@@ -1,0 +1,120 @@
+/* 
+    Document   : ieltseye
+    Created on : 2013-7-16, 5:00:54
+    Author     : lixiaoxin
+    Description:
+        Purpose of the stylesheet follows.
+*/
+body
+{
+    /*font-family: georgia, "times new roman", times, serif;*/
+    /*font-size: 14px/18px;*/
+}
+
+#header
+{
+	margin: 5px 0px;
+	padding: 0;
+}
+
+#content
+{
+    padding: 20px;
+}
+
+#footer
+{
+	padding: 10px;
+	margin: 10px 20px;
+	border-top: 1px solid #C9E0ED;
+}
+.gad{
+    bottom:0px;
+    position:fixed;
+    margin:0;
+    padding:0;
+}
+#back-to-top{
+        position:fixed;
+        bottom:100px;
+        left:5px;
+}
+#back-to-top a{
+        width: 10px;
+        word-wrap: break-word;
+        text-align:center;
+        text-decoration:none;
+        color:#d1d1d1;
+        display:block;
+        /*使用CSS3中的transition属性给跳转链接中的文字添加渐变效果*/
+        -moz-transition:color 1s; 
+        -webkit-transition:color 1s;
+        -o-transition:color 1s;
+}
+#back-to-top a:hover{
+        color:#979797;
+}
+#back-to-top a span{
+        background:#d1d1d1;
+        border-radius:6px;
+        display:block;
+        height:10px;
+        width:10px;
+        background:#d1d1d1 no-repeat center center;
+        margin-bottom:5px;
+        -moz-transition:background 1s;
+        -webkit-transition:background 1s;
+        -o-transition:background 1s;
+}
+#back-to-top a:hover span{
+        background:#979797 no-repeat center center;
+}
+.ieltsKeyword{
+    padding:0px;
+}
+
+.topicCard{
+    position: relative;
+    margin: 15px 0;
+    padding: 39px 19px 14px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.topicCard .part {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    color: #9da0a4;
+    -webkit-border-radius: 4px 0 4px 0;
+    -moz-border-radius: 4px 0 4px 0;
+    border-radius: 4px 0 4px 0;
+}
+.topicCard .description{
+    margin-left:15px;
+    margin-bottom:15px;
+}
+.sample{
+    font-family: georgia, "times new roman", times, serif;
+    font-size: 16px;
+    line-height: 1.5em;
+    color: #333;
+}
+
+.relative{
+    
+}
+.relative .topic{
+    
+}
+
+.relative .topic li{
+    padding-top: 10px;
+}
