@@ -41,7 +41,12 @@ class IeltsApiController extends Controller
 		}
 		$jsondata['datas'] = $data;
 		header('Access-Control-Allow-Origin: *');
-		echo Yii::app()->request->getParam('callback').'('.json_encode($jsondata).')';
+        header("Content-type: application/json");
+		$callback =  Yii::app()->request->getParam('callback');
+		if ($callback) {
+			echo Yii::app()->request->getParam('callback').'('.json_encode($jsondata).')';
+		}
+		echo json_encode($jsondata);
 		Yii::app()->end();
 	}
     
