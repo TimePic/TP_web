@@ -45,8 +45,9 @@ class IeltsApiController extends Controller
 		$callback =  Yii::app()->request->getParam('callback');
 		if ($callback) {
 			echo Yii::app()->request->getParam('callback').'('.json_encode($jsondata).')';
+		}else{
+			echo json_encode($jsondata);
 		}
-		echo json_encode($jsondata);
 		Yii::app()->end();
 	}
     
