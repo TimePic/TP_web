@@ -59,7 +59,7 @@ class IeltsApiController extends Controller
             $keyword=strtr($keyword, array('%'=>'\%', '_'=>'\_'));
         }
 		$jsondata = $data = array();
-		$page = $page ? intval($page) : 0;
+		$page = $page ? intval($page) -1 : 0;
 		$pageSize = 7;
         //cache
         $dependency = new CDbCacheDependency('SELECT COUNT(*) FROM {{ieltseye_weibo}}');
