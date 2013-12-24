@@ -127,6 +127,13 @@ return array(
 					//'filter'=>'CLogFilter',
 					'logFile'=>'timepic.log',
 				),
+				array(
+				    'class' => 'CFileLogRoute',
+				    'levels' => 'trace, info',
+				    'categories' => 'ieltseye.*',
+				    //'filter'=>'CLogFilter',
+				    'logFile' => 'ieltseye_web.log',
+				),			
                 array(
                     'class'=>'CProfileLogRoute',
                     'report'=>'summary',

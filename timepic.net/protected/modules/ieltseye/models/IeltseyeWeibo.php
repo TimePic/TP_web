@@ -179,4 +179,38 @@ class IeltseyeWeibo extends CActiveRecord
 		}
         return $data;
     }
+    
+    static function getApiWeibo($params=array(), $start=0, $length=20){
+	if (isset($params['keyword'])) {
+	    $keyword = $params['keyword'];
+	    $keyword = strtr($keyword, array('%' => '\%', '_' => '\_'));
+	}
+	$data = array();
+
+	//cache
+	$dependency = new CDbCacheDependency('SELECT COUNT(*) FROM {{ieltseye_weibo}}');
+	$command = Yii::app()->db->cache(3600, $dependency)->createCommand();
+
+	$command->select('uid, screen_name, text, created_at');
+	$command->from('{{ieltseye_weibo}}');
+
+	//status -1 删除（隐藏） 0 抓取微博还没发 1 已经发送微博  2发送微博失败 大于0的 都可以显示
+	$command->where('status >= 0');
+
+	$command->order('created_at DESC');
+	$command->limit($length, $start);
+
+	if (!empty($keyword)) {
+	    $command->where(array('like', 'text', '%' . $keyword . '%'));
+	}
+
+	$query = $command->queryAll();
+	foreach ($query as $row) {
+	    //去掉@某人
+	    $row['text'] = preg_replace("/@[\\x{4e00}-\\x{9fa5}\\w\\-]+/u", "", $row['text']);
+	    $row['created_at'] = CommonHelper::sgmdate('Y-m-d H:i:s', CHtml::encode($row['created_at']), 1);
+	    $data[] = $row;
+	}
+	return $data;
+    }
 }
