@@ -120,8 +120,8 @@ class IeltsEyeCommand extends CConsoleCommand{
      * default action: search keywords by crond
      */
     public function actionIndex(){
-        $this->actionSearch("人人网雅思哥 p");
-        sleep(45);
+//        $this->actionSearch("人人网雅思哥 p");
+//        sleep(45);
         $this->actionSearch("room p1 p2");
         sleep(45);
         $this->actionSearch("room part1 part2");
