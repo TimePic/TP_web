@@ -22,6 +22,28 @@ class ArticleController extends Controller
 		echo json_encode($jsondata);
 		Yii::app()->end();
 	}
+        
+        public function actionListPage($page) {
+                $page = $page ? intval($page) : '1';
+		$pagenum = 20;
+		if($page){
+			$offset = ($page -1) * $pagenum;
+			$limit = $pagenum;
+		}
+		$data = $jsondata = array();
+		$query = Yii::app()->db->createCommand()->select('a.*, c.catname, c.catid')->from('{{totorotalk_article}} a')->leftJoin('{{totorotalk_category}} c', 'a.catid=c.catid')->limit($limit, $offset)->order('displayorder DESC, dateline')->query();
+		while ($row = $query->read()) {
+			$row['id'] = intval($row['aid']);
+			unset($row['aid']);
+			$row['dateline'] = date("Y-m-d H:i:s", $row['dateline']);
+			$row['title'] = $row['catid'] ? $row['catname'].'-'.CommonHelper::cutstr($row['title'], 24) : CommonHelper::cutstr($row['content'], 24);
+			$row['content'] = CommonHelper::cutstr($row['content'], 300);
+			$data[] = $row;
+		}
+		$jsondata['datas'] = $data;
+		echo json_encode($jsondata);
+		Yii::app()->end();
+	}
 	
 	public function actionGetinfo($id) {
 		$data = $jsondata = array();
